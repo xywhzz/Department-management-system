@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>部门列表</title>
+	</head>
+	<body>
+
+	<script type='text/javascript'>
+		function del(deptno){
+			// 弹出确认框
+			var ok = window.confirm("删除不可恢复哦");
+			if(ok){
+				window.location = '/dep/dept/delete?deptno=' + deptno;
+			}
+		}
+	</script>
+
+
+
+		<h1 align = "center">部门列表</h1>
+		
+		<table border="1px" align="center">
+			
+			<tr>
+				<th>序号</th>
+				<th>部门编号</th>
+ 				<th>部门名称</th>
+				<th>操作</th>
+			</tr>
+			
+			<tr>
+				<td>1</td>
+				<td>10</td>
+				<td>销售部</td>
+				
+				<td>
+					<a href="javascript:void(0)" onclick="window.confirm('确认删除该数据吗')">删除</a>
+					<a href="edit.html">修改</a>			
+					<a href="detail.html">详情</a>							
+				</td>
+			</tr>
+			
+			<tr>
+				<td>2</td>
+				<td>20</td>
+				<td>研发部</td>
+				<td>
+					<a href="">删除</a>
+					<a href="edit.html">修改</a>			
+					<a href="detail.html">详情</a>							
+				</td>		
+			</tr>	
+		</table>
+
+
+		<hr>
+		<a href="add.html">新增部门</a>
+	</body>
+</html>
